@@ -1,2 +1,10 @@
 Debug/
+bin/
 *.dll
+*.cache
+obj/
+*.dll
+*.pdb
+*.txt
+*.cache
+
