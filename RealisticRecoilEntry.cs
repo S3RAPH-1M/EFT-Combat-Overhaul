@@ -71,6 +71,8 @@ namespace RealisticRecoil
             {"CROM_CR7_WEAP_FDE",(0.8f, 0.4f, 6f, 0f) }, // Katto CR7 FDE
             {"CROM_CR7_WEAP_BLK",(0.8f, 0.4f, 6f, 0f) }, // Katto CR7 BLK
             {"weapon_stiletto",(0.777f, 1.4f, 2f, 0f) }, // Tron's Stiletto
+            {"64637076203536ad5600c990",(0.5f, 0.5f, 12f, 1f) }, // PKM
+            {"64ca3d3954fc657e230529cc",(0.5f, 0.5f, 12f, 1f) }, // PKP
         };
         public Dictionary<string, Dictionary<string, ValueTuple<float, float, float, float>>> CaliberModifiers = new Dictionary<string, Dictionary<string, ValueTuple<float, float, float, float>>>
         {
@@ -79,8 +81,8 @@ namespace RealisticRecoil
             {
                 "AssaultRifle", new Dictionary<string, ValueTuple<float, float, float, float>>
                 {
-                    {"556x45NATO", (0.6f, 0.65f, 8f, 0f) },
-                    {"762x51", (1.3f, 0.6f, 5.7f, 0f) },
+                    {"556x45NATO", (0.8f, 0.65f, 8f, 0f) },
+                    {"762x51", (1.3f, 0.8f, 5.7f, 0f) },
                     {"762x39", (0.7f, 0.8f, 9f, 0f) },
                     {"762x35", (0.85f, 0.95f, 5f, 0f) },
                     {"545x39", (0.65f, 0.55f, 4.5f, 0f) },
@@ -91,8 +93,8 @@ namespace RealisticRecoil
             {
                 "assaultRifle", new Dictionary<string, ValueTuple<float, float, float, float>>
                 {
-                    {"556x45NATO", (0.6f, 0.65f, 8f, 0f) },
-                    {"762x51", (1f, 0.6f, 5.7f, 0f) },
+                    {"556x45NATO", (0.8f, 0.65f, 8f, 0f) },
+                    {"762x51", (1f, 0.8f, 5.7f, 0f) },
                     {"762x39", (0.7f, 0.8f, 9f, 0f) },
                     {"762x35", (0.85f, 0.95f, 5f, 0f) },
                     {"545x39", (0.65f, 0.55f, 4.5f, 0f) },
@@ -103,9 +105,9 @@ namespace RealisticRecoil
             {
                 "AssaultCarbine", new Dictionary<string, ValueTuple<float, float, float, float>>
                 {
-                    {"762x51", (0.7f, 0.6f, 0f, 0f) },
-                    {"556x45NATO", (0.6f, 0.35f, 10f, 0f) },
-                    {"762x39", (0.6f, 0.55f, 1.6f, 0f) },
+                    {"762x51", (0.7f, 0.8f, 0f, 0f) },
+                    {"556x45NATO", (0.8f, 0.35f, 10f, 0f) },
+                    {"762x39", (0.8f, 0.55f, 1.6f, 0f) },
                     {"366TKM", (0.75f, 0.85f, 3f, 0f) },
                     {"9x39", (0.65f, 0.55f, 7f, 0f) },
                     {"127x55", (1.3f, 0.9f, 0f, 0f) }
@@ -121,7 +123,7 @@ namespace RealisticRecoil
                 "MarksmanRifle", new Dictionary<string, ValueTuple<float, float, float, float>>
                 {
                     {"86x70", (0.8f, 1.7f, 6f, 0f) },
-                    {"762x54R", (0.6f, 1.3f, 6f, 0f) },
+                    {"762x54R", (0.8f, 1.3f, 6f, 0f) },
                     {"762x51", (1.18f, 1.7f, 12f, 0f) },
                     {"9x39", (0.65f, 0.55f, 12f, 0f) },
                     {"6.8 TVCM", (1f, 8f, 12f, 0f) },
@@ -132,19 +134,19 @@ namespace RealisticRecoil
                 {
                     {"9x21", (0.9f, 0.3f, 1.7f, 1f) },
                     {"9x19PARA", (0.5f, 0.9f, 4f, 3f) },
-                    {"9x18PM", (0.65f, 0.6f, 4f, 1f) },
+                    {"9x18PM", (0.65f, 0.8f, 4f, 1f) },
                     {"762x25TT", (1f, 0.3f, 4f, 1f) },
                     {"46x30", (0.75f, 0.7f, 3.2f, 1f) },
                     {"1143x23ACP", (0.85f, 0.7f, 4f, 1f) },
                     {"57x28", (0.8f, 0.5f, 3f, 1f) },
-                    {"762x54R", (0.6f, .8f, 12f, 0f) }, // katto DP-27 
-                    {"357SIG", (0.6f, 0.7f, 6f, 0f) }, // katto Scorpion EVO
+                    {"762x54R", (0.8f, .8f, 12f, 0f) }, // katto DP-27 
+                    {"357SIG", (0.8f, 0.7f, 6f, 0f) }, // katto Scorpion EVO
                 }
             },
             {
                 "Shotgun", new Dictionary<string, ValueTuple<float, float, float, float>>
                 {
-                    {"12g", (0.8f, 0.6f, 7f, 0f) },
+                    {"12g", (0.8f, 0.8f, 7f, 0f) },
                     {"20g", (1.2f, 0.8f, 4f, 0f) },
                     {"23x75", (2f, 2f, 2f, 0f) },
                 }
@@ -260,7 +262,7 @@ namespace RealisticRecoil
                 if (!Instance.LocalPlayer.HandsController.IsAiming)
                 {
                     Instance.LocalPlayer.ProceduralWeaponAnimation.Shootingg.RecoilStrengthXy = DefaultXYValues * Instance.LocalPlayer.ProceduralWeaponAnimation.Shootingg.ConvertFromTaxanomy(controller.Item.Template.RecoilForceUp * num + this.GClass1315_0.RecoilVertBonus) * (modifiers.Item1 * 2) * 1.3f;
-                    Instance.LocalPlayer.ProceduralWeaponAnimation.Shootingg.RecoilStrengthZ = DefaultBackwardsValues * Instance.LocalPlayer.ProceduralWeaponAnimation.Shootingg.ConvertFromTaxanomy(controller.Item.Template.RecoilForceBack * num + this.GClass1315_0.RecoilBackBonus) * (modifiers.Item2 * 0.6f * 1.3f);
+                    Instance.LocalPlayer.ProceduralWeaponAnimation.Shootingg.RecoilStrengthZ = DefaultBackwardsValues * Instance.LocalPlayer.ProceduralWeaponAnimation.Shootingg.ConvertFromTaxanomy(controller.Item.Template.RecoilForceBack * num + this.GClass1315_0.RecoilBackBonus) * (modifiers.Item2 * 0.8f * 1.3f);
                 }
                 else
                 {
@@ -355,7 +357,7 @@ namespace RealisticRecoil
                     Instance.LocalPlayer.ProceduralWeaponAnimation.BlindFireRotation = Vector3.Lerp(Instance.LocalPlayer.ProceduralWeaponAnimation.BlindFireRotation, PointFireLeftRotation, Time.deltaTime * 12);
                     Instance.LocalPlayer.ProceduralWeaponAnimation.StartBlindFire(1);
 
-                    Instance.LocalPlayer.ProceduralWeaponAnimation.Shootingg.RecoilStrengthXy = DefaultXYValues * Instance.LocalPlayer.ProceduralWeaponAnimation.Shootingg.ConvertFromTaxanomy(controller.Item.Template.RecoilForceUp * num + this.GClass1315_0.RecoilVertBonus) * (modifiers.Item1 * 0.6f);
+                    Instance.LocalPlayer.ProceduralWeaponAnimation.Shootingg.RecoilStrengthXy = DefaultXYValues * Instance.LocalPlayer.ProceduralWeaponAnimation.Shootingg.ConvertFromTaxanomy(controller.Item.Template.RecoilForceUp * num + this.GClass1315_0.RecoilVertBonus) * (modifiers.Item1 * 0.8f);
                     Instance.LocalPlayer.ProceduralWeaponAnimation.Shootingg.RecoilStrengthZ = DefaultBackwardsValues * Instance.LocalPlayer.ProceduralWeaponAnimation.Shootingg.ConvertFromTaxanomy(controller.Item.Template.RecoilForceBack * num + this.GClass1315_0.RecoilBackBonus) * (modifiers.Item2 * 2f);
                 }
                 if (PointFireLeft.Value == false && PFLHasRan == false)
@@ -384,7 +386,7 @@ namespace RealisticRecoil
                     Instance.LocalPlayer.ProceduralWeaponAnimation.BlindFireRotation = Vector3.Lerp(Instance.LocalPlayer.ProceduralWeaponAnimation.BlindFireRotation, PointFireRightRotation, Time.deltaTime * 12);
                     Instance.LocalPlayer.ProceduralWeaponAnimation.StartBlindFire(1);
 
-                    Instance.LocalPlayer.ProceduralWeaponAnimation.Shootingg.RecoilStrengthXy = DefaultXYValues * Instance.LocalPlayer.ProceduralWeaponAnimation.Shootingg.ConvertFromTaxanomy(controller.Item.Template.RecoilForceUp * num + this.GClass1315_0.RecoilVertBonus) * (modifiers.Item1 * 0.6f);
+                    Instance.LocalPlayer.ProceduralWeaponAnimation.Shootingg.RecoilStrengthXy = DefaultXYValues * Instance.LocalPlayer.ProceduralWeaponAnimation.Shootingg.ConvertFromTaxanomy(controller.Item.Template.RecoilForceUp * num + this.GClass1315_0.RecoilVertBonus) * (modifiers.Item1 * 0.8f);
                     Instance.LocalPlayer.ProceduralWeaponAnimation.Shootingg.RecoilStrengthZ = DefaultBackwardsValues * Instance.LocalPlayer.ProceduralWeaponAnimation.Shootingg.ConvertFromTaxanomy(controller.Item.Template.RecoilForceBack * num + this.GClass1315_0.RecoilBackBonus) * (modifiers.Item2 * 2f);
                 }
                 if (PointFireRight.Value == false && PFRHasRan == false)
